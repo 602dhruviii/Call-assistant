@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* *=========== AI theme =========== */
+@layer base {
+  :root {
+    --background: 210 100% 99%; /* Light electric blue background */
+    --foreground: 230 20% 15%;  /* Dark blue foreground */
+
+    --card: 210 100% 99%;
+    --card-foreground: 230 20% 15%;
+
+    --popover: 210 100% 99%;
+    --popover-foreground: 230 20% 15%;
+
+    --primary: 250 70% 50%; /* Neon purple primary color */
+    --primary-foreground: 210 100% 99%; /* Light blue foreground */
+
+    --secondary: 220 15% 95%; /* Soft purple for secondary elements */
+    --secondary-foreground: 230 20% 15%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 230 20% 50%; /* Muted blue for softer text */
+
+    --accent: 220 15% 95%;
+    --accent-foreground: 230 20% 15%;
+
+    --destructive: 0 80% 60%; /* Bright red for destructive actions */
+    --destructive-foreground: 210 100% 99%;
+
+    --border: 230 20% 85%; /* Light blue border */
+    --input: 230 20% 85%;
+    --ring: 250 70% 50%; /* Neon purple for focus rings */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 230 20% 15%; /* Dark blue background */
+    --foreground: 210 100% 99%; /* Light blue text */
+
+    --card: 240 15% 18%; /* Darker card background */
+    --card-foreground: 210 100% 99%;
+
+    --popover: 230 20% 15%;
+    --popover-foreground: 210 100% 99%;
+
+    --primary: 250 70% 50%; /* Neon purple */
+    --primary-foreground: 210 100% 99%;
+
+    --secondary: 240 15% 20%; /* Darker secondary background */
+    --secondary-foreground: 210 100% 99%;
+
+    --muted: 240 15% 20%;
+    --muted-foreground: 230 20% 70%; /* Lighter blue for text */
+
+    --accent: 240 15% 20%;
+    --accent-foreground: 210 100% 99%;
+
+    --destructive: 0 80% 60%; /* Bright red */
+    --destructive-foreground: 210 100% 99%;
+
+    --border: 240 15% 20%; /* Darker blue border */
+    --input: 240 15% 20%;
+    --ring: 250 70% 50%; /* Neon purple */
+  }
+}
+
+.shadow-light {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.085);
+}
+
+.shadow-dark {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.141);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.btn {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding:2%;
+  border-radius: 33px;
+  border: none;
+  background-color: #4426D9;
+}
+.loader {
+  width: 5.4em;
+  height: 5.4em;
+  border: 0.4em solid rgb(84, 84, 84);
+  border-left-color: #a23ffc;
+  border-radius: 45%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.call-buton .cc-calto-action-ripple {
+  position: relative;
+  top: 30%;
+	background: #4426D9;
+	width:10px;
+	height: 10px;
+	border-radius: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #ffffff;
+	-webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+	animation: cc-calto-action-ripple 0.6s linear infinite;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-decoration: none; }
+	.call-buton .cc-calto-action-ripple i {
+	  -webkit-transition: 0.3s ease;
+	  transition: 0.3s ease;
+	  font-size: 2.2rem; }
+	.call-buton .cc-calto-action-ripple:hover i {
+	  -webkit-transform: rotate(135deg);
+	  transform: rotate(135deg); }
+  
+    @-webkit-keyframes cc-calto-action-ripple {
+      0% {
+        -webkit-box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 0 rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 0 rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2);
+      }
+      100% {
+        -webkit-box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2), 0 0 0 20px rgba(0, 123, 255, 0);
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2), 0 0 0 20px rgba(0, 123, 255, 0);
+      }
+    }
+    
+    @keyframes cc-calto-action-ripple {
+      0% {
+        -webkit-box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 0 rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 0 rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2);
+      }
+      100% {
+        -webkit-box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2), 0 0 0 20px rgba(0, 123, 255, 0);
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2), 0 0 0 5px rgba(0, 123, 255, 0.2), 0 0 0 10px rgba(0, 123, 255, 0.2), 0 0 0 20px rgba(0, 123, 255, 0);
+      }
+    }
+    
+	span.num{
+		position: absolute;
+    color: #005eec;
+	}
